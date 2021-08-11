@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heather's Designs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
+
+
+
+">
+</head>
+<body>
+   
+    <div class="hero">
+        <img src="Logo.svg" alt="" class="logo">
+        <div class="header">
+            <a href="#about" class="link">About</a>
+            <a href="#events" class="link">My Designs</a>
+            <a href="#" class="link">Contact me</a>
+        </div>
+        <div class="hero-title-container">
+            <div class="textwrapper">
+                <h1>Heather Roper's Designs</h1>
+                <h2>I craft beautiful designs just for you!!!</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="about" id="about">
+        <h1>-About Me-</h1>
+       
+         <div class="container">
+             <div class="abouttext">
+                 
+                 <p>My name is Heather Roper. I am a 3rd grade teacher. I enjoy crafting custom cakes and cupcakes and sweet treats. I am married to a wonderful man and have a 5 year old daughter. Allow me to craft something for your next birthday, wedding, or special occasion.</p>
+             </div>
+             <img src="heather.png" alt="" class="heather">
+         </div>
+
+        
+    </div>
+
+    <div class="events" id="events">
+        <i class="fas fa-chevron-right right" id="next"></i>
+        <i class="fas fa-chevron-left left" id="prev"></i>
+        <div class="sliderwrapper">
+
+            <div class="slide current">
+                
+                <div class="slideinfo">
+                    <h1>Daughter's First Cake</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slideinfo">
+                    <h1>Duck Tub Design</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slideinfo">
+                    <h1>Niece's Cake</h1>
+                </div>
+            </div>
+           
+
+        
+            
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>&copy Heather Roper Designs 2021</h2>
+    </div>
+
+        
+
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const next = document.querySelector('#next');
+            const prev = document.querySelector('#prev');
+            const auto = false; // Auto scroll
+            const intervalTime = 5000;
+            let slideInterval;
+    
+            const nextSlide = () => {
+            // Get current class
+            const current = document.querySelector('.current');
+            // Remove current class
+            current.classList.remove('current');
+            // Check for next slide
+            if (current.nextElementSibling) {
+                // Add current to next sibling
+                current.nextElementSibling.classList.add('current');
+            } else {
+                // Add current to start
+                slides[0].classList.add('current');
+            }
+            setTimeout(() => current.classList.remove('current'));
+            };
+    
+            const prevSlide = () => {
+            // Get current class
+            const current = document.querySelector('.current');
+            // Remove current class
+            current.classList.remove('current');
+            // Check for prev slide
+            if (current.previousElementSibling) {
+                // Add current to prev sibling
+                current.previousElementSibling.classList.add('current');
+            } else {
+                // Add current to last
+                slides[slides.length - 1].classList.add('current');
+            }
+            setTimeout(() => current.classList.remove('current'));
+            };
+    
+            // Button events
+            next.addEventListener('click', e => {
+            nextSlide();
+            if (auto) {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, intervalTime);
+            }
+            });
+    
+            prev.addEventListener('click', e => {
+            prevSlide();
+            if (auto) {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, intervalTime);
+            }
+            });
+    
+            // Auto slide
+            if (auto) {
+            // Run next slide at interval time
+            slideInterval = setInterval(nextSlide, intervalTime);
+            }
+    
+        </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,425 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Header Design Styles-------------------------*/
+
+.link{
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    
+    
+}
+
+.link:hover{
+    background-color: white;
+    border-radius: 7px;
+    color:rgba(48, 7, 48, 0.74)
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(51, 4, 51, 0.685), rgba(48, 7, 48, 0.555)), url(cake1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.logo{
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.header{
+    position: fixed;
+    top:20px;
+    right: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+}
+
+
+.hero-title-container{
+    height: auto;
+    width: 750px;
+    background-color: #a678776c;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-40px);
+}
+
+.textwrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero-title-container h1{
+    text-align: left;
+    color: white;
+    font-family: 'Parisienne', cursive;
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-size: 3.125rem;
+    font-weight: bold;
+    
+}
+
+.hero-title-container h2{
+    margin-top: 2px;
+    font-size: 1.69rem;
+    color: white;
+    font-weight: lighter;
+
+
+}
+
+/* About Me Design Styles-------------------------*/
+
+.about{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #614459;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about h1{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #1d191c;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: white;
+    font-size: 35px;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 90%;
+}
+
+.heather{
+    border: 5px solid black;
+    z-index: 30;
+    height: 340px;
+    width: 450px;
+
+}
+
+.abouttext{
+
+    transform: translateX(40px);
+    background-color: #632752;
+    height: auto;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.abouttext p{
+    color: white;
+    font-size: 18px;
+    line-height: 24px;
+    width: 75%;
+    height: 80%;
+    margin-left: 20px;
+    
+}
+
+/* my Designs slider section Me Design Styles-------------------------*/
+
+.events{
+    height: 450px;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.left{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: white;
+    font-size: 30px;
+    z-index: 200;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.left:hover{
+    opacity: .6;
+}
+
+.right:hover{
+    opacity: .6;
+}
+
+.right{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    z-index: 200;
+    transition: .5s ease;
+}
+
+.latest{
+    height: auto;
+    width: 100vw;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333;
+}
+
+.latest h2{
+   margin: 0;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.latest h1{
+    margin-top: 5px;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+.sliderwrapper{
+    
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.466)), url(firstcake.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .5s ease;
+    opacity: 0;
+    
+}
+
+.slideinfo{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    height: auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 5, 53);
+    padding: 10px;
+}
+   
+
+.slideinfo h1{
+    color: white;
+    font-size: 25px;
+}
+
+.current{
+    
+    opacity: 1;
+    z-index: 100;
+}
+
+.slide:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.466)), url(duckcake.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.slide:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(0, 0, 0, 0.466)), url(birthday\ cake.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.slide:nth-child(4) {
+    background-image: linear-gradient(45deg,rgba(0, 0, 255, 0.582),rgba(255, 0, 0, 0.644));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.footer{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h2{
+    color: white;
+    font-size: 19px;
+}
+
+@media (max-width: 375px) {
+    .header{
+       top: 50%;
+        right: 0;
+        left: 10px;
+        top: 250px;
+        position: absolute;
+        width: 95vw;
+        
+    }
+
+    .logo{
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .hero-title-container{
+        width: 100%;
+        height: 200px;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+        padding: 3px;
+    }
+
+    .hero-title-container h1{
+        font-size: 1.5em;
+    }
+
+    .hero-title-container h2{
+        font-size: 1em;
+    }
+
+    .about{
+        
+        height: auto;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .heather{
+        width: 90vw;
+        height: 300px;
+    }
+
+    .abouttext {
+        width: 90%;
+        height: auto;
+        transform: translateX(-20px) translateY(10px);
+    }
+
+    .abouttext p{
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
