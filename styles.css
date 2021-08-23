@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -18,10 +23,46 @@ body{
     
 }
 
+.link:active{
+    color: black;
+    background-color: white;
+    
+}
+
 .link:hover{
     background-color: white;
     border-radius: 7px;
     color:rgba(48, 7, 48, 0.74)
+}
+
+.cta{
+    color: white;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 7px;
+    display: block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: .5s ease;
+
+}
+
+.cta:hover{
+    background-color: white;
+    color: black;
+}
+
+.active{
+    border-radius: 7px;
+    display: block;
+    padding: 10px 20px;
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+    background-color: white;
 }
 
 .hero{
@@ -39,6 +80,102 @@ body{
 
 }
 
+.mobilemenu{
+    height: 330px;
+    width: 300px;
+    background-color: rgba(56, 24, 56, 0.849);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    flex-direction: column;
+    z-index: 500;
+    transform: translateX(400%) translateY(-50%);
+    transition: .9s ease;
+    opacity: 0;
+
+}
+
+.open{
+    transform: translateX(50%) translateY(-50%);
+    opacity: 1;
+}
+
+.close{
+    transform: translateX(400%) translateY(-50%);
+    opacity: 0;
+
+}
+
+.mobilelink{
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.mobilelink:hover{
+    background-color: white;
+    border-radius: 7px;
+    color: black;
+}
+
+.wrapper{
+    
+    padding-top: 10px;
+    height: 20px;
+    width: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .5s ease;
+    background-color: black;
+    z-index:600;
+    visibility: hidden;
+}
+
+.line1{
+    height: 3px;
+    width: 50%;
+    background-color: white;
+    transition: .5s ease;
+}
+
+.line2{
+    height: 3px;
+    width: 50%;
+    background-color: white;
+    transform: translateY(-10px);
+    transition: .5s ease;
+}
+
+.clicked{
+    transform: rotate(45deg) translateY(3px);
+}
+.clickedtwo{
+    transform: rotate(-45deg) translateY(-3px);
+}
+
+.rotate{
+    transform: rotate(90deg);
+    padding-bottom: 10px;
+    right: 30px;
+}
+
+
+
 .logo{
     height: 130px;
     width: 130px;
@@ -48,18 +185,25 @@ body{
 }
 
 .header{
+    background-color: rgb(44, 3, 44);
     position: fixed;
-    top:20px;
-    right: 40px;
+    top:0;
+    right: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 500px;
+    z-index: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
 }
 
 
+
+
 .hero-title-container{
-    height: auto;
+    height:auto;
     width: 750px;
     background-color: #a678776c;
     padding: 20px;
@@ -74,6 +218,8 @@ body{
 }
 
 .textwrapper{
+    
+   
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -318,6 +464,81 @@ body{
 
 }
 
+/* Conatct Me Design Styles-------------------------*/
+.contactme{
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(36, 6, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    height: 450px;
+    width: 60%;
+    background-color: rgb(155, 141, 155);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form h1{
+    color: white;
+    font-size:25px;
+}
+
+input{
+    height: 30px;
+    width: 50%;
+    background-color: rgba(26, 5, 22, 0.336);
+    border: 2px solid rgba(252, 252, 252, 0.37);
+    margin: 5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 16p;
+
+}
+input::placeholder{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.548);
+}
+ 
+
+
+textarea{
+    width: 50%;
+    background-color: rgba(92, 69, 92, 0.459);
+    border: 2px solid rgba(252, 252, 252, 0.37);
+    margin: 5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    
+
+}
+
+.submit{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    width: 80px;
+    height: auto;
+    color: white;
+    background-color: rgb(105, 81, 105);
+    cursor: pointer;
+}
+
+textarea::placeholder{
+    color: rgba(255, 255, 255, 0.493);
+    font-size: 15px;
+}
+
 .footer{
     background-color: black;
     height: 80px;
@@ -332,15 +553,59 @@ body{
     font-size: 19px;
 }
 
-@media (max-width: 375px) {
+
+@media (max-width: 768px) {
+    .hero-title-container{
+        width: 80vw;
+        height: 100px;
+    }
+
+    
+
+    .heather{
+        height: 300px;
+        width: 350px;
+    }
+
+    .container{
+        margin-top: 30px;
+    }
+
+    .abouttext{
+        width: 400px;
+        height: 300px;
+        transform: translateY(30px) translateX(20px);
+    }
+
+    form{
+        width: 80vw;
+
+    }
+
+    input{
+        width: 90%;
+    }
+
+    textarea{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 500px) {
     .header{
-       top: 50%;
+        top: 0;
         right: 0;
-        left: 10px;
-        top: 250px;
-        position: absolute;
-        width: 95vw;
+        left: 0;
+        padding: 10px;
+        position:fixed;
+        width: 100vw;
+        display: none;
         
+    }
+
+    .wrapper{
+        visibility: visible;
     }
 
     .logo{
@@ -382,22 +647,301 @@ body{
     }
 
     .heather{
-        width: 90vw;
-        height: 300px;
+        width: 80vw;
+        height: 250px;
     }
 
     .abouttext {
         width: 90%;
         height: auto;
         transform: translateX(-20px) translateY(10px);
+        z-index: 300;
     }
 
     .abouttext p{
         width: 90%;
     }
+
+    form{
+        width: 90vw;
+    }
+
+    input{
+        width: 90%;
+        margin: 10px;
+    }
+
+    textarea{
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 414px) {
+    .header{
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        position:fixed;
+        width: 100vw;
+        display: none;
+        
+    }
+
+    .wrapper{
+        visibility: visible;
+    }
+
+    .logo{
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .hero-title-container{
+        width: 100%;
+        height: 200px;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+        padding: 3px;
+    }
+
+    .hero-title-container h1{
+        font-size: 1.5em;
+    }
+
+    .hero-title-container h2{
+        font-size: 1em;
+    }
+
+    .about{
+        
+        height: auto;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .heather{
+        width: 80vw;
+        height: 250px;
+    }
+
+    .abouttext {
+        width: 90%;
+        height: auto;
+        transform: translateX(-20px) translateY(10px);
+        z-index: 300;
+    }
+
+    .abouttext p{
+        width: 90%;
+    }
+
+    form{
+        width: 90vw;
+    }
+
+    input{
+        width: 90%;
+        margin: 10px;
+    }
+
+    textarea{
+        width: 90%;
+        margin: 10px;
+    }
 }
 
 
+@media (max-width: 375px) {
+    .header{
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        position:fixed;
+        width: 100vw;
+        display: none;
+        
+    }
+
+    .wrapper{
+        visibility: visible;
+    }
+
+    .cta{
+        font-size: 15px;
+
+    }
+
+    .logo{
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .hero-title-container{
+        width: 100%;
+        height: 200px;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+        padding: 3px;
+    }
+
+    .hero-title-container h1{
+        font-size: 1.5em;
+    }
+
+    .hero-title-container h2{
+        font-size: 1em;
+    }
+
+    .about{
+        
+        height: auto;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .heather{
+        width: 80vw;
+        height: 250px;
+    }
+
+    .abouttext {
+        width: 90%;
+        height: auto;
+        transform: translateX(-20px) translateY(10px);
+        z-index: 300;
+    }
+
+    .abouttext p{
+        width: 90%;
+    }
+
+    form{
+        width: 90vw;
+    }
+
+    input{
+        width: 90%;
+        margin: 10px;
+    }
+
+    textarea{
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header{
+        top: 0;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        position:fixed;
+        width: 100vw;
+        display: none;
+        
+    }
+
+    .wrapper{
+        visibility: visible;
+    }
+
+    .cta{
+        font-size: 15px;
+
+    }
+
+    .logo{
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link{
+        font-size: 16px;
+    }
+
+    .hero-title-container{
+        width: 100%;
+        height: 200px;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+        padding: 3px;
+    }
+
+    .hero-title-container h1{
+        font-size: 1.5em;
+    }
+
+    .hero-title-container h2{
+        font-size: 1em;
+    }
+
+    .about{
+        
+        height: auto;
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .heather{
+        width: 80vw;
+        height: 250px;
+    }
+
+    .abouttext {
+        width: 90%;
+        height: auto;
+        transform: translateX(-20px) translateY(10px);
+        z-index: 300;
+    }
+
+    .abouttext p{
+        width: 90%;
+    }
+
+    form{
+        width: 90vw;
+    }
+
+    input{
+        width: 90%;
+        margin: 10px;
+    }
+
+    textarea{
+        width: 90%;
+        margin: 10px;
+    }
+}
 
 
 

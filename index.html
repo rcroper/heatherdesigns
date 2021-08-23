@@ -14,20 +14,35 @@
 
 
 ">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
    
     <div class="hero">
+       
+        <div class="wrapper" id="wrapper">
+            <span class="line1" id="line1"></span>
+            <span class="line2" id="line2"></span>
+        </div>
+        <div class="mobilemenu" id="mobile">
+            <a href="#" class="link" id="mobiletoplink"><i class="fas fa-arrow-up white"></i></a>
+            <a href="#about" class="mobilelink" id="mobileabout">About</a>
+            <a href="#events" class="mobilelink" id="mobileevents">My Designs</a>
+            <a href="#contactme" class="mobilelink" id="mobilecontact">Contact Me</a>
+        </div>
+        
         <img src="Logo.svg" alt="" class="logo">
         <div class="header">
-            <a href="#about" class="link">About</a>
-            <a href="#events" class="link">My Designs</a>
-            <a href="#" class="link">Contact me</a>
+            <a href="#" class="link" id="toplink"><i class="fas fa-arrow-up white"></i></a>
+            <a href="#about" class="link" id="aboutlink">About</a>
+            <a href="#events" class="link" id="eventslink">My Designs</a>
+            <a href="#contactme" class="link" id="contactlink">Contact me</a>
         </div>
         <div class="hero-title-container">
             <div class="textwrapper">
                 <h1>Heather Roper's Designs</h1>
                 <h2>I craft beautiful designs just for you!!!</h2>
+                <a href="#contactme" class="cta">Need Cake-Contact Me</a>
             </div>
         </div>
 
@@ -76,12 +91,110 @@
         </div>
     </div>
 
+    <div class="contactme" id="contactme">
+        <form action="contact.php" method="POST">
+            <h1>Contact Me</h1>
+            <input  name="name" type="text" placeholder="Enter Your Name">
+            <input  name="email" type="email" placeholder="Enter Your Email">
+            <textarea name="message" id="message" placeholder="Enter Your Message" cols="30" rows="10"></textarea>
+            <input type="Submit"  value="Send" class="submit">
+        </form>
+    </div>
+
     <div class="footer">
         <h2>&copy Heather Roper Designs 2021</h2>
     </div>
 
         
+        <script>
+            const mobileabout = document.querySelector("#mobileabout");
+            const mobileevents = document.querySelector("#mobileevents");
+            const mobilecontact = document.querySelector("#mobilecontact");
+            const mobiletoplink = document.querySelector("#mobiletoplink");
+            const contact = document.querySelector('#contactlink');
+            const events = document.querySelector('#eventslink');
+            const about = document.querySelector('#aboutlink');
+            const initial= document.querySelector('#toplink');
+            const menu = document.querySelector('.mobilemenu');
+            const line1 =document.querySelector('#line1');
+            const line2 =document.querySelector('#line2');
+            const wrapper = document.querySelector('#wrapper');
+            
 
+            
+            
+            wrapper.onclick = function () {
+                line1.classList.toggle("clicked");
+                line2.classList.toggle("clickedtwo");
+                wrapper.classList.toggle ("rotate");
+                menu.classList.toggle("open");
+                contact.onclick = function () {
+                menu.style.opacity = "0";
+                }
+
+            }
+
+            mobiletoplink.onclick = function () {
+                menu.classList.remove("open");
+                wrapper.classList.remove('rotate');
+                line1.classList.remove("clicked");
+                line2.classList.remove("clickedtwo");
+
+            }
+
+            mobilecontact.onclick = function () {
+                menu.classList.remove("open");
+                wrapper.classList.remove('rotate');
+                line1.classList.remove("clicked");
+                line2.classList.remove("clickedtwo");
+
+            }
+
+            mobileabout.onclick = function () {
+                menu.classList.remove("open");
+                wrapper.classList.remove('rotate');
+                line1.classList.remove("clicked");
+                line2.classList.remove("clickedtwo");
+            }
+
+            mobileevents.onclick = function () {
+                menu.classList.remove("open");
+                wrapper.classList.remove('rotate');
+                line1.classList.remove("clicked");
+                line2.classList.remove("clickedtwo");
+            }
+            
+
+
+
+            contact.onclick = function () {
+                
+                contact.classList.add("active");
+                about.classList.remove("active");
+                events.classList.remove("active");
+                initial.classList.remove("active");
+            };
+            events.onclick = function () {
+                contact.classList.remove("active");
+                about.classList.remove("active");
+                events.classList.add("active");
+                initial.classList.remove("active");
+            };
+            about.onclick = function () {
+                initial.classList.remove("active");
+                contact.classList.remove("active");
+                about.classList.add("active");
+                events.classList.remove("active");
+            };
+            initial.onclick = function () {
+                initial.classList.add("active");
+                contact.classList.remove("active");
+                about.classList.remove("active");
+                events.classList.remove("active");
+            };
+           
+             
+        </script>
         <script>
             const slides = document.querySelectorAll('.slide');
             const next = document.querySelector('#next');
@@ -146,6 +259,8 @@
             }
     
         </script>
+
+     
     
     
 </body>
